@@ -88,10 +88,12 @@ function closePopup(e) {
 };
 
 // Закрытие popup при нажатии вне
-infoCat.addEventListener("click", function(event) {
-    infoCat.classList.remove("active");
-    infoCat.style.display = "none";
-    infoCat.lastChild.remove();
+document.addEventListener("click", function(event) {
+    if (event.target.className == "info__cat active") {
+        infoCat.classList.remove("active");
+        infoCat.style.display = "none";
+        infoCat.lastChild.remove();
+    }
 })
 
 // Event на нажатие "Escape"

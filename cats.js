@@ -72,7 +72,7 @@ const cats = [
         "id": 8
     },
     {
-        "name": "Лара",
+        "name": "Светлячок",
         "img_link": "https://www.friendforpet.ru/api/sites/default/files/2022-01/%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D1%8F%D1%87%D0%BE%D0%BA4_%D0%B0%D0%BB%D0%B5%D0%BA%D1%81.jpg",
         "age": 1,
         "rate": 9,
