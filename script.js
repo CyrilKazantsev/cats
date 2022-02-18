@@ -76,32 +76,26 @@ function popupCat(e) {
 
 // Закрытие Popup
 const infoCat = document.querySelector(".info__cat")
-infoCat.addEventListener("click", closePopup)
-
 
 function closePopup(e) {
     if (e.target.className == "close__button") {
         infoCat.classList.remove("active");
         infoCat.style.display = "none"
         infoCat.lastChild.remove();
+    } else if (e.target.className == "info__cat active") {
+        infoCat.classList.remove("active");
+        infoCat.style.display = "none";
+        infoCat.lastChild.remove();
+    } else if (e.code === "Escape") {
+        e.preventDefault();
+        infoCat.classList.remove("active");
+        infoCat.style.display = "none";
+        infoCat.lastChild.remove();
     }
 };
 
 // Закрытие popup при нажатии вне
-document.addEventListener("click", function(event) {
-    if (event.target.className == "info__cat active") {
-        infoCat.classList.remove("active");
-        infoCat.style.display = "none";
-        infoCat.lastChild.remove();
-    }
-})
+document.addEventListener("click", closePopup);
 
 // Event на нажатие "Escape"
-document.addEventListener("keydown", function(event){
-    if (event.code === "Escape") {
-        event.preventDefault();
-        infoCat.classList.remove("active");
-        infoCat.style.display = "none";
-        infoCat.lastChild.remove();
-    }
-})
+document.addEventListener("keydown", closePopup);
