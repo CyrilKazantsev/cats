@@ -1,5 +1,5 @@
 if (Cookies.get("user")) {
-    window.location.replace("/cats/index.html")
+    window.location.replace("/cats")
 }
 
 const authForm = document.querySelector(".auth-form");
