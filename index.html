@@ -6,21 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бабуленькины котики</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 </head>
 <body>
     <header>
         <img src="img/blackCat.svg" class="logo" alt="Бабуленькины котики">
         <p>Бабуленькины котики</p>
-
+        <form id="form-search">
+            <input type="number" placeholder="Введите номер котика">
+            <button type="submit" id="find-cat">Найти котика</button>
+            <button type="button" id="add-cat">Добавить котика</button>
+            <button class="reload-data">Обновить данные о котах</button>
+        </form>
+        <div class="greet"></div>
     </header>
     <main class="main__container">
         <!-- <div class="popup__test"></div> -->
     </main>
     <div class="info__cat"></div>
+    <div>
+        <div>
+            <form class="form-add">
+                <input type="text" class="input-cat" placeholder="Введите ID" name="id" id="id"><br>
+                <input type="text" class="input-cat" placeholder="Введите имя котика" name="name" id="name"><br>
+                <input type="text" class="input-cat" placeholder="Введите возраст котика" name="age" id="age"><br>
+                <input type="text" class="input-cat" placeholder="Введите ссылку на котика" name="img_link" id="img_link"><br>
+                <input type="text" class="input-cat" placeholder="Введите описание котика" name="description" id="description"><br>
+                <input type="text" class="input-cat" placeholder="Введите оценку" name="rate" id="rate"><br>
+                <button type="submit" class="added">Добавить котика</button>
+            </form>
+        </div>
+    </div>
+    <div >
+        <div>
+            <form class="form-edit">
+                <input type="text" class="input-cat" placeholder="Введите ID" name="id"><br>
+                <input type="text" class="input-cat" placeholder="Введите имя котика" name="name"><br>
+                <input type="text" class="input-cat" placeholder="Введите возраст котика" name="age"><br>
+                <input type="text" class="input-cat" placeholder="Введите ссылку на котика" name="img_link"><br>
+                <input type="text" class="input-cat" placeholder="Введите описание котика" name="description"><br>
+                <input type="text" class="input-cat" placeholder="Введите оценку" name="rate" id="rate_edit"><br>
+                <button type="submit" class="edit">Редактировать</button>
+            </form>
+        </div>
+    </div>
     <footer>
         <p>©2022 All rights reserved</p>
     </footer>
-    <script src="cats.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
