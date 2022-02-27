@@ -9,7 +9,7 @@ authForm.addEventListener("submit", (e)=> {
     if (inputName.value.trim() !== "") {
         document.cookie = `user=${inputName.value}; secure; samesite=lax`;
         inputName.value = "";
-        window.location.replace("/index.html")
+        window.location.replace("/cats")
     }
     else {
         alert("Введите данные перед сохранением")
