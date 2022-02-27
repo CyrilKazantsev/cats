@@ -1,5 +1,5 @@
 if (!Cookies.get("user")) {
-    window.location.replace("/auth.html")
+    window.location.replace("/cats/auth.html")
 } else {
     const greet = document.querySelector(".greet")
     greet.innerHTML = `Привет, ${Cookies.get("user")}!`
